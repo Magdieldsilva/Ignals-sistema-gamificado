@@ -108,6 +108,53 @@
     z-index: 9999;
     }
 
+    .title-epic {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    background: linear-gradient(90deg, #58a6ff, #bc8cff);
+
+    background-clip: text;              /* padrão */
+    -webkit-background-clip: text;      /* Chrome */
+
+    color: transparent;                 /* ESSENCIAL */
+
+    position: relative;
+    display: inline-block;
+    }
+
+/* Linha animada embaixo */
+.title-epic::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #58a6ff;
+    transition: 0.4s;
+}
+
+/* Anima ao passar o mouse */
+.title-epic:hover::after {
+    width: 100%;
+}
+
+.title-neon {
+    font-size: 28px;
+    font-weight: bold;
+    color: #58a6ff;
+
+    text-shadow:
+        0 0 5px #58a6ff,
+        0 0 10px #58a6ff,
+        0 0 20px #58a6ff,
+        0 0 40px #bc8cff;
+
+    transition: 0.3s;
+}
+
     .floating-text {
     color: #3fb950;
     font-weight: bold;
@@ -116,46 +163,46 @@
 
     @keyframes floatUp {
     0% {
-        opacity: 1;
-        transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
     }
     100% {
-        opacity: 0;
-        transform: translateY(-30px);
+    opacity: 0;
+    transform: translateY(-30px);
     }
     }
 
     .title-neon:hover {
     text-shadow:
-        0 0 10px #58a6ff,
-        0 0 20px #58a6ff,
-        0 0 30px #bc8cff,
-        0 0 60px #bc8cff;
-}
-
-.spark {
-    position: fixed;
-    width: 6px;
-    height: 6px;
-    background: #58a6ff;
-    border-radius: 50%;
-    pointer-events: none;
-
-    box-shadow:
-        0 0 6px #58a6ff,
-        0 0 12px #bc8cff;
-
-    animation: sparkAnim 0.8s ease-out forwards;
-}
-
-@keyframes sparkAnim {
-    0% {
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
+    0 0 10px #58a6ff,
+    0 0 20px #58a6ff,
+    0 0 30px #bc8cff,
+    0 0 60px #bc8cff;
     }
-    100% {
-        opacity: 0;
-        transform: translate(var(--x), var(--y)) scale(0.3);
+
+    .spark {
+        position: fixed;
+            width: 6px;
+            height: 6px;
+            background: #58a6ff;
+            border-radius: 50%;
+            pointer-events: none;
+
+            box-shadow:
+            0 0 6px #58a6ff,
+            0 0 12px #bc8cff;
+
+            animation: sparkAnim 0.8s ease-out forwards;
+            }
+
+            @keyframes sparkAnim {
+                0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+            opacity: 0;
+            transform: translate(var(--x), var(--y)) scale(0.3);
     }
 }
 
