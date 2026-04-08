@@ -256,11 +256,15 @@
 
         <br>
 
+        Diária:
         <label><input type="checkbox" id="missao1" onchange="handleMission(this, 20)">Resolver 2 exercícios de matemática (+20 moedas)</label><br>
         <label><input type="checkbox" id="missao2" onchange="handleMission(this, 30)">Resolver 5 multiplicações (+30 moedas)</label><br>
         <label><input type="checkbox" id="missao3" onchange="handleMission(this, 50)">Assistir 1 aula (+50 moedas)</label><br>
         <label><input type="checkbox" id="missao4" onchange="handleMission(this, 40)">Fazer 1 resumo da aula (+40 moedas)</label><br>
-        <label><input type="checkbox" id="missao5" onchange="handleMission(this, 40)">práticar o que aprendeu na aula (+40 moedas)</label><br>
+        <label><input type="checkbox" id="missao5" onchange="handleMission(this, 40)">práticar o que aprendeu na aula (+40 moedas)</label><br><br>
+
+        Semanal:
+        <label><input type="checkbox" id="missao6" onchange="handleMission(this, 200)">Enviar pelo menos 1 material de estudo criado por você para a Mari. (+200 moedas)</label><br>
         
     </div>
 
@@ -336,7 +340,7 @@
               ↳ Técnica de Método Feynman - Explicar um conteúdo como se fosse para uma criança.<br>
               ↳ Elaboração - Fazer perguntas no meio do estudo.<br>
               ↳ Técnica Pomodoro - 25 minutos de estudo + 5 de pausa. Repete isso quantas vezes quiser.<br>
-                <span style="color: #d29922;">Sempre produza algo para alguém.</span><br>
+                <span style="color: #d29922;">Sempre produza algo para alguém. Explique, destaque, pense que a outra pessoa não sabe do que você está falando, mesmo que ela saiba, estude algo e explique como se fosse o professor daquele assunto em seu material.</span><br>
 
         <div class="log">
                 Estudar sempre será chato, mas se isso é a sua identidade, você cria um hábito bom, uma disciplina para o seu corpo. Se é sua identidade, o dia que você não estudar, estará indo contra a sua própria vontade.
@@ -488,7 +492,7 @@ function handleMission(element, moneyValue) {
 }
 
 function loadMissions() {
-    const missions = ["missao1", "missao2", "missao3", "missao4", "missao5"];
+    const missions = ["missao1", "missao2", "missao3", "missao4", "missao5", "missao6];
     let hoje = new Date().toDateString();
 
     missions.forEach(id => {
