@@ -146,7 +146,7 @@
     font-weight: bold;
     color: #58a6ff;
 
-    text-shadow:
+    -shadow:
         0 0 5px #58a6ff,
         0 0 10px #58a6ff,
         0 0 20px #58a6ff,
@@ -155,7 +155,7 @@
     transition: 0.3s;
 }
 
-    .floating-text {
+    .floating- {
     color: #3fb950;
     font-weight: bold;
     animation: floatUp 1s ease forwards;
@@ -173,7 +173,7 @@
     }
 
     .title-neon:hover {
-    text-shadow:
+    -shadow:
     0 0 10px #58a6ff,
     0 0 20px #58a6ff,
     0 0 30px #bc8cff,
@@ -211,9 +211,9 @@
 </head>
 
 <body>
-    <div id="floating-text-container"></div>
+    <div id="floating--container"></div>
     <div class="money-box">
-    💎 <span id="moneyText">0</span>
+    💎 <span id="money">0</span>
     </div>
 
 <div class="container">
@@ -225,7 +225,7 @@
     <div class="card">
         <h2>📊 Progresso Geral</h2>
 
-        <p id="levelText"></p>
+        <p id="level"></p>
 
         <div class="progress-bar">
             <div class="progress" id="progressBar"></div>
@@ -252,7 +252,7 @@
     <div class="card">
         <h2>⚔️ Missões</h2>
 
-        <p id="levelText"></p>
+        <p id="missionText"></p>
 
         <br>
 
@@ -492,7 +492,7 @@ function handleMission(element, moneyValue) {
 }
 
 function loadMissions() {
-    const missions = ["missao1", "missao2", "missao3", "missao4", "missao5", "missao6];
+    const missions = ["missao1", "missao2", "missao3", "missao4", "missao5", "missao6"];
     let hoje = new Date().toDateString();
 
     missions.forEach(id => {
@@ -611,7 +611,7 @@ function levelDown() {
 loadHabits();
 loadMissions();
 updateUI();
-autoBackup();
+backupData();
 </script>
 
 </body>
